@@ -3,7 +3,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 from flask_login import current_user
 from flask_bcrypt import Bcrypt
 import httpx
-import requests 
+# import requests 
 
 from icecream import ic 
 from datetime import datetime 

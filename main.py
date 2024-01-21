@@ -35,7 +35,7 @@ def user_loader(email):
 
 @app.route('/')
 def index():
-    return 'Home Page - <a href="/login">Login</a> | <a href="/protected">Protected Page</a>'
+    return render_template('index.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():

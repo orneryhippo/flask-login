@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Protected Page</title>
+    <title>Password Reset</title>
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,15 +15,29 @@
     />
   </head>
   <body>
-    <div class="navbar-container">{% include 'navbarp.html' %}</div>
+    <div class="navbar-container">{% include 'navbar.html' %}</div>
     {% if message %}
     <h1>{{ message }}</h1>
     <br />
     {% endif %}
 
     <div class="container">
-      <h2 class="mt-5">Protected Page</h2>
-      <p>Welcome, you are logged in!</p>
+      <h2 class="mt-5">Password Reset</h2>
+      <form method="post">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Send Password Reset
+        </button>
+      </form>
     </div>
   </body>
 </html>

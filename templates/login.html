@@ -8,17 +8,18 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
   </head>
   <body>
+    <div class="navbar-container">{% include 'navbar.html' %}</div>
     {% if message %}
     <h1>{{ message }}</h1>
     <br />
-    <h1><a href="/">Home</a></h1>
-    <br />
-    <h1><a href="/register">Register</a></h1>
-    <br />
-    <h2>or try again with a different user name and password.</h2>
-    {% endif %}<br />
+    {% endif %}
     <div class="container">
       <h2 class="mt-5">Login</h2>
       <form method="post">

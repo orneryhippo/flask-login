@@ -8,15 +8,19 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
   </head>
   <body>
+    <div class="navbar-container">{% include 'navbar.html' %}</div>
     <div class="container">
       <h2 class="mt-5">Home Page</h2>
-      <a href="/register">Register</a>
-      <br />
-      <a href="/login">Login</a>
-      <br />
-      <a href="/protected">Protected Page</a>
+      <div class="content-container">
+        <p>This is where the content would go, if I had any.</p>
+      </div>
     </div>
   </body>
 </html>
